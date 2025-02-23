@@ -8,7 +8,9 @@ const addEmployee = async (req, res) => {
     const { name, email, phone, city } = req.body;
 
     // Check if employee already exists
-    let existingEmployee = await Employee.findOne({ email } || { phone });
+    let existingEmployee = await Employee.findOne({
+      $or: [{ email }, { phone }],
+    });
     if (existingEmployee)
       return res.status(400).json({ message: "Employee already exists" });
 

@@ -11,10 +11,10 @@ const {
 const router = express.Router();
 
 // Define Routes
-router.post("/", addEmployee);           // Create Employee
-router.get("/", getAllEmployees);        // Get All Employees
-router.get("/:id", getEmployeeById);     // Get Employee by ID
-router.put("/:id", updateEmployee);      // Update Employee
-router.delete("/:id", deleteEmployee);   // Delete Employee
+router.post("/addemployee", addEmployee);           // Create Employee
+router.get("/getallemployees", getAllEmployees);        // Get All Employees
+router.get("/getemployee/:id", getEmployeeById);     // Get Employee by ID
+router.put("/updateemployee/:id", updateEmployee);      // Update Employee
+router.delete("/deleteemployee/:id", deleteEmployee);   // Delete Employee
 
 module.exports = router;
