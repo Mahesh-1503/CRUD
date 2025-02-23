@@ -3,7 +3,7 @@
 const Employee = require("../models/Employee");
 
 // ✅ Create a new Employee
-addEmployee = async (req, res) => {
+const addEmployee = async (req, res) => {
   try {
     const { name, email, phone, city } = req.body;
 
@@ -23,7 +23,7 @@ addEmployee = async (req, res) => {
 };
 
 // ✅ Get All Employees
-getAllEmployees = async (req, res) => {
+const getAllEmployees = async (req, res) => {
   try {
     const employees = await Employee.find();
     res.status(200).json(employees);
@@ -33,7 +33,7 @@ getAllEmployees = async (req, res) => {
 };
 
 // ✅ Get Single Employee by ID
-getEmployeeById = async (req, res) => {
+const getEmployeeById = async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
     if (!employee)
@@ -46,7 +46,7 @@ getEmployeeById = async (req, res) => {
 };
 
 // ✅ Update Employee by ID
-updateEmployee = async (req, res) => {
+const updateEmployee = async (req, res) => {
   try {
     const updatedEmployee = await Employee.findByIdAndUpdate(
       req.params.id,
@@ -66,7 +66,7 @@ updateEmployee = async (req, res) => {
 };
 
 // ✅ Delete Employee by ID
-deleteEmployee = async (req, res) => {
+const deleteEmployee = async (req, res) => {
   try {
     const deletedEmployee = await Employee.findByIdAndDelete(req.params.id);
 
