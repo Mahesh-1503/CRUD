@@ -1,0 +1,41 @@
+# Ignore node_modules and build output
+node_modules/
+dist/
+build/
+
+# Ignore environment variables and lock files
+.env
+.yarn.lock
+package-lock.json
+
+# Ignore configuration and system files
+.npmrc
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Ignore public assets and compiled files
+public/
+coverage/
+
+# Ignore database files and logs
+*.sqlite
+*.sqlite3
+*.log
+
+# Ignore TypeScript build output (if applicable)
+*.d.ts
+
+# Ignore Next.js and Vercel build outputs (if applicable)
+.next/
+.vercel/
+out/
+
+# Ignore test snapshots
+__snapshots__/
+
+# Ignore backend logs and temporary files
+*.pid
+*.seed
+tmp/

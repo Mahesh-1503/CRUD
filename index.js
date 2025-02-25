@@ -1,8 +1,8 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const employeeRoutes = require("./routes/employeeRoutes");
+const express = require('express');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const employeeRoutes = require('./routes/employeeRoutes');
 const app = express();
 
 dotenv.config();
@@ -21,12 +21,12 @@ mongoose
     console.log(`Error: ${err.message} ❌❌`);
   });
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.send(`Welcome to the Home Page!`);
 });
 
 // Routes here 👇'/employees' is url and 'employeeRoutes' is the file name
-app.use("/employees", employeeRoutes);
+app.use('/employees', employeeRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running at http://localhost:${PORT} 🌐`);
